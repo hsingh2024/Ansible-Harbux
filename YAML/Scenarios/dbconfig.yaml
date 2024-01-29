@@ -1,0 +1,6 @@
+# Database Connection
+  database:
+    hostname: "localhost"
+    port: 3306
+    username: "myuser"
+    password: "mypassword"
