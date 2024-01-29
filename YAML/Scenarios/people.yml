@@ -1,7 +1,7 @@
 ---
 #Personal INfomation
 Personal_Info:
-  - person:
+  - person1:
       personname: Bill
       Age: 40
       address:
@@ -9,7 +9,7 @@ Personal_Info:
         city: Bangalore
 	zip: 560001
 
-  - person:
+  - person2:
       personlname: Jake
       Age: 35
       address:
@@ -17,7 +17,7 @@ Personal_Info:
         city: Bangalore
 	zip: 560001
 
-  - person:
+  - person3:
       personlname: Brue
       Age: 30
       address:
