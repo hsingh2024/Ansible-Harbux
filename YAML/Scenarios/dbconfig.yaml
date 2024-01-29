@@ -1,6 +1,9 @@
 # Database Connection
   database:
-    hostname: "localhost"
+    hostname: localhost
     port: 3306
-    username: "myuser"
-    password: "mypassword"
+    username: myuser
+    password: mypassword
+  App:
+    application: myapp
+    debug: true
