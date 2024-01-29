@@ -1,0 +1,19 @@
+---
+Maincategories:
+  - name: "Fruits"
+    items: #items per pounds
+      - name: "Apple"
+        price: 1.99
+      - name: "Pear"
+        price: 3.75
+      - name: "Orange"
+        price: 3.00
+
+  - name: "Veggies"
+    items:
+      - name: "Okra"
+        price: 3.50
+      - name: "Beans"
+        price: 2.25
+      - name: "Tomato"
+        price: 2.80
