@@ -1,0 +1,25 @@
+#Personal INfomation
+Personal_Info:
+  - person:
+      personname: Bill
+      Age: 40
+      address:
+        street: 1091 hooes Street
+        city: Bangalore
+	      zip: 560001
+
+  - person:
+      personlname: Jake
+      Age: 35
+      address:
+        street: 27 kings lane
+        city: Bangalore
+	      zip: 560001
+
+  - person:
+      personlname: Brue
+      Age: 30
+      address:
+        street: 179 beverley street
+        city: Bangalore
+	      zip: 560001
