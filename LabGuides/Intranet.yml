@@ -30,20 +30,21 @@
         content: "Hello World! \n"
         dest: /var/www/html/index.html
 
-    - name: Add exception in firewall for http service
+    - name: Adding the  exception in firewalld
       firewalld:
         service: http
         permanent: true
         state: enabled
         immediate: yes
 
-    - name: Verify the web page
-      uri:
-        url: http://localhost
-      register: result
+- name: Verify the web page
+  hosts: harbux-node1
+  tasks:
+   - name: Test
+     uri:
+       url: http://localhost
+     register: result
 
-    - name: Result display
-      debug:
-        var: result.status
-
-
+   - name: Result display
+     debug:
+       var: result.status
