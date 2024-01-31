@@ -38,7 +38,7 @@
         immediate: yes
 
 - name: Verify the web page
-  hosts: harbux-node1
+  hosts: localhost
   tasks:
    - name: Test
      uri:
