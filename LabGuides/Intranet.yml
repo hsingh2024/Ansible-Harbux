@@ -37,12 +37,12 @@
         state: enabled
         immediate: yes
 
-    - name: Verify the web page is accessible locally
+    - name: Verify the web page
       uri:
         url: http://localhost
       register: result
 
-    - name: Display verification result
+    - name: Result display
       debug:
         var: result.status
 
