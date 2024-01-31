@@ -1,0 +1,55 @@
+---
+- hosts: harbux-node1
+  become: yes
+  vars:
+    web_pkg: httpd
+    firewall_pkg: firewalld
+    web_service: httpd
+    firewall_service: firewalld
+    python_pkg: python3-PyMySQL
+    rule: http
+  tasks:
+    - name: Install the latest packages
+      ansible.builtin.yum:
+        name:
+          - "{{ web_pkg }}"
+          - "{{ firewall_pkg }}"
+          - "{{ python_pkg }}"
+        state: latest
+    - name: The {{ firewall_service }} service is STarted enabled
+      ansible.builtin.service:
+        name: "{{ firewall_service }}"
+        enabled: true
+        state: started
+    - name: The {{ web_service }} service is STarted enabled
+      ansible.builtin.service:
+        name: "{{ web_service }}"
+        enabled: true
+        state: started
+
+    - name: write the custom content
+      copy:
+        content: "Example web content related to variable! \n"
+        dest: /var/www/html/index.html
+
+    - name: The firewall port for {{ rule }} is open
+      firewalld:
+        service: "{{ rule }}"
+        permanent: true
+        immediate: true
+        state: enabled
+
+- name: Verify the Apache servicve
+  hosts: localhost #harbux-node1
+  become: false
+  tasks:
+   - name: webpage is accessable
+     uri:
+       url: http://harbux-node1
+       status_code: 200
+     register: result
+
+   - name: Result display
+     debug:
+       var: result.status
+
