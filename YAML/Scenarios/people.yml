@@ -7,7 +7,7 @@ Personal_Info:
       address:
         street: 1091 hooes Street
         city: Bangalore
-	zip: 560001
+	      zip: 560001
 
   - person2:
       personlname: Jake
@@ -15,7 +15,7 @@ Personal_Info:
       address:
         street: 27 kings lane
         city: Bangalore
-	zip: 560001
+	      zip: 560001
 
   - person3:
       personlname: Brue
@@ -23,4 +23,4 @@ Personal_Info:
       address:
         street: 179 beverley street
         city: Bangalore
-	zip: 560001
+	      zip: 560001
